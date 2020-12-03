@@ -8,3 +8,5 @@ export const LoadingComponent: React.FC<{inverted?: boolean, content?: string}> 
         </Dimmer>
     )
 }
+
+export default LoadingComponent;
