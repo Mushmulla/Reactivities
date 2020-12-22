@@ -25,6 +25,8 @@ axios.interceptors.response.use(undefined, error => {
     {
         toast.error('Server error - check temrinal for more info!');
     }
+
+    throw error;
 })
 
 const responseBody = (response: AxiosResponse) => response.data;

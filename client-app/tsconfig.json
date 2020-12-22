@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
+    
   
     "target": "es5",
     "lib": [
@@ -22,6 +23,8 @@
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src",
+    "./typings-custom/**/*.ts"
   ]
+  
 }
