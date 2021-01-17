@@ -1,15 +1,22 @@
-import { date } from 'date-fns/locale/af';
-import { observable, action,makeObservable, computed, configure, runInAction } from 'mobx';
-import { createContext, SyntheticEvent } from 'react';
+import { observable, action,makeObservable, computed, runInAction } from 'mobx';
+import { SyntheticEvent } from 'react';
 import agent from '../api/agent';
 import { IActivity } from '../models/activity';
 import {history} from '../..';
-import { Toast } from 'react-toastify/dist/components';
+
 import { toast } from 'react-toastify';
+import { RootStore } from './rootStore';
 
-configure({enforceActions: 'always'});
 
-class ActivityStore {
+
+export default class ActivityStore {
+
+  rootStore: RootStore;
+  constructor (rootStore: RootStore) {
+    makeObservable(this);
+    this.rootStore = rootStore;
+  }
+
   @observable activityRegistry = new Map();
 
   @observable loadingInitial = false;
@@ -34,9 +41,9 @@ class ActivityStore {
     }, {} as {[key: string]: IActivity[]}));
   }
 
-  constructor() {
-    makeObservable(this);
-  }
+  // constructor() {
+  //   makeObservable(this);
+  // }
 
   @action loadActivities = async () => {
     this.loadingInitial = true;
@@ -154,4 +161,4 @@ class ActivityStore {
   };
 }
 
-export default createContext(new ActivityStore());
+//export default createContext(new ActivityStore());
