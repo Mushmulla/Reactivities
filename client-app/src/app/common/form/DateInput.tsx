@@ -2,7 +2,6 @@ import React from 'react'
 import { FieldRenderProps } from 'react-final-form';
 import { FormFieldProps, Form, Label } from 'semantic-ui-react';
 import {DateTimePicker} from 'react-widgets';
-import { stringifyKey } from 'mobx/dist/internal';
 
 interface IProps
   extends FieldRenderProps<Date, HTMLElement>,

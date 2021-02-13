@@ -1,4 +1,4 @@
-import React,{FormEvent, useContext, useEffect, useState} from 'react'
+import React,{useContext, useEffect, useState} from 'react'
 import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 import { ActivityFormValues } from '../../../app/models/activity'
 import {v4 as uuid} from 'uuid';
@@ -75,12 +75,6 @@ interface DetailParams {
          }
    }
 
-   const handleInputChange = (
-     event: FormEvent<HTMLInputElement | HTMLTextAreaElement>
-   ) => {
-     const { name, value } = event.currentTarget;
-     setActivity({ ...activity, [name]: value });
-   };
 
    return (
      <Grid>

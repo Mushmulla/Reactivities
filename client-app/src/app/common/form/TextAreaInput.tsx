@@ -1,7 +1,6 @@
 import React from 'react'
 import { FieldRenderProps } from 'react-final-form'
 import { FormField, FormFieldProps, Label } from 'semantic-ui-react';
-import TextInput from './TextInput';
 
 interface IProps extends FieldRenderProps<string, HTMLTextAreaElement>, FormFieldProps {}
 
