@@ -30,5 +30,7 @@ namespace API.Controllers
         {
             return await Mediator.Send(new List.Query { Username = username, Predicate = predicate });
         }
+
+        
     }
 }

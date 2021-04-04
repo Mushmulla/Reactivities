@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react-lite';
 import React, { useContext } from 'react';
 import { Tab, Grid, Header, Card } from 'semantic-ui-react';
 import { RootStoreContext } from '../../app/stores/rootStore';
@@ -33,4 +34,4 @@ const ProfileFollowings = () => {
   );
 };
 
-export default ProfileFollowings;
+export default observer(ProfileFollowings) ;

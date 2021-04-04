@@ -1,4 +1,3 @@
-import { profile } from 'console'
 import { observer } from 'mobx-react-lite'
 import React, { useContext, useState } from 'react'
 import { Button, Grid, GridColumn, Header, Tab } from 'semantic-ui-react'
